@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.core.Ordered; // Import Ordered
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.filter.CorsFilter; // Corrected import for CorsFilter
+import org.springframework.web.filter.CorsFilter; // Corrected import for CorsFilter
 
 @Configuration
 public class WebConfig {
@@ -16,7 +16,7 @@ public class WebConfig {
         // Allow credentials (e.g., cookies, authorization headers)
         config.setAllowCredentials(true);
         // Specify the exact origin of your frontend application
-        config.addAllowedOrigin("[https://y-y-home-mart-user.vercel.app](https://y-y-home-mart-user.vercel.app)");
+        config.addAllowedOrigin("https://y-y-home-mart-user.vercel.app");
         // Allow all headers from the client
         config.addAllowedHeader("*");
         // Allow all HTTP methods (GET, POST, PUT, DELETE, OPTIONS, etc.)
